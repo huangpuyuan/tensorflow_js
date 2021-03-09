@@ -22,7 +22,7 @@ window.onload = async() =>{
     const model = tf.sequential();
     // 全连接层
     model.add(tf.layers.dense({ units: 1, inputShape: [1] }));
-    // 均方误差，优化器：随机梯度下降（SGD）
+    // 损失函数：均方误差，优化器：随机梯度下降（SGD）
     model.compile({
         loss: tf.losses.meanSquaredError,
         optimizer: tf.train.sgd(0.1)
